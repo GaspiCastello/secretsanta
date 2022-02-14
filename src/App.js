@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import UserForm from "./components/UserForm";
+import UsersList from "./components/UsersList";
+import EmailSender from "./components/EmailSender";
 
+// asdasdasds
 function App() {
+  const [userList, setUserList] = useState([]);
+
+  const deleteItemHandler = (goalId) => {
+    setUserList((prevList) => {
+      console.log(prevList,'in setting')
+      const updatedList = prevList.filter((goal) => goal.id !== goalId);
+      console.log(updatedList,'updatedList')
+      return updatedList;
+    });
+  };
+  console.log(userList, "userlist");
+  const inputHandler = (user) => {
+    setUserList((prevState) => {
+      return [user, ...prevState];
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <section className="App-header  "></section>
+      <section className="App-data">
+        <UserForm onInputUser={inputHandler} />
+        <UsersList items={userList} onDelete={deleteItemHandler} />
+        <EmailSender templateParams={userList} />
+      </section>
     </div>
   );
 }
