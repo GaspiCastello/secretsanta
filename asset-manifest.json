@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/secretsanta/static/css/main.bb761735.css",
+    "main.js": "/secretsanta/static/js/main.625a2e91.js",
+    "static/js/787.0dd6b35b.chunk.js": "/secretsanta/static/js/787.0dd6b35b.chunk.js",
+    "index.html": "/secretsanta/index.html",
+    "main.bb761735.css.map": "/secretsanta/static/css/main.bb761735.css.map",
+    "main.625a2e91.js.map": "/secretsanta/static/js/main.625a2e91.js.map",
+    "787.0dd6b35b.chunk.js.map": "/secretsanta/static/js/787.0dd6b35b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb761735.css",
+    "static/js/main.625a2e91.js"
+  ]
+}
