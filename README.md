@@ -1,4 +1,4 @@
-# Secret santa app
+# Secret santa app 🎅🏽
 This was my first one, I just came up with this idea and pushed myself towards develop it from scratch to a deployed app.
 
 ## How it works
